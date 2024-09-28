@@ -1,0 +1,6 @@
+<p>global-tasks works!</p>
+tasks: {{ vm$ | async | json }}
+paging turned: {{ pagingTurnedSequenceOfValue | json }}
+<!--value: {{ test | async}}-->
+<!--<button (click)="updateTask()">change task</button>-->
+<button (click)="getPagingTurnedSequenceOfValue()">get pagingTurnedSequenceOfValue</button>

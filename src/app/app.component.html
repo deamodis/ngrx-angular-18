@@ -1,0 +1,9 @@
+{{ this.counter()  + 'D'}}
+
+<div>User name: {{(user$ | async)?.name}} </div>
+
+<button (click)="noCdClick()" [routerLink]="'tasks'">noCdClick</button>
+<app-simple-view-1 [simpleViewCustomName]="customName" />
+<app-user></app-user>
+<app-drive-viewer></app-drive-viewer>
+<router-outlet/>

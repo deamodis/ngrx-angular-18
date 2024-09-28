@@ -1,0 +1,9 @@
+<div *ngIf="(user$ | async) as user; else loggedOut">
+  <p>Welcome, {{ user.name }}</p>
+  <p *ngIf="(profile$ | async) as profile">Profile: {{ profile.email }}</p>
+</div>
+<ng-template #loggedOut>
+  <p>Please log in</p>
+  <button (click)="login()">login</button>
+  <button (click)="refreshToken()">refresh token</button>
+</ng-template>
